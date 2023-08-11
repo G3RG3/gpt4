@@ -91,17 +91,24 @@ a:hover {
     height: 100%;
 }
 
-.container {
+
+
+.tile-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px; /* This creates spacing between your tiles */
+    gap: 20px;  /* Space between tiles */
 }
 
-section {
-    flex: 0 0 calc(50% - 10px); /* This ensures that each section will take up about 50% of the width of the container minus half of the gap */
-    max-width: calc(50% - 10px); /* Ensuring sections don't grow larger than half the width of the container */
+.tile-container > section {
+    flex: 0 0 calc(50% - 10px);  /* Takes half of the container's width minus half of the gap */
+    box-sizing: border-box;     /* To include any potential padding and border in the element's total width and height */
+    max-width: calc(50% - 10px);
 }
 
-
+@media screen and (max-width: 768px) {
+    .tile-container > section {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
 

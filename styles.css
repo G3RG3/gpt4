@@ -140,3 +140,7 @@ a:hover {
     }
 }
 
+.tile {
+    cursor: pointer;
+}
+

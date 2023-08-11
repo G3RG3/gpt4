@@ -103,10 +103,5 @@ section {
     max-width: calc(50% - 10px); /* Ensuring sections don't grow larger than half the width of the container */
 }
 
-@media screen and (max-width: 200px) {
-    section {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-}
+
 

@@ -11,7 +11,8 @@
         <h1>TBILISI - Project Dashboard</h1>
     </header>
     <div class="tile-container">
-        <section id="timeline">
+        <section id="timeline" class = "tile">
+             <div class="expand-button">Expand</div>
             <h2>Project Timeline</h2>
                 <div class="iframe-container">
                     <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTxFVaw-fhelJsxy9jtelJZGnoL3axzOuEoX8gubTgfgbS-jkhsHYvmnItlF0Ybzg/embed?start=false&loop=false&delayms=3000" frameborder="0" class="responsive-iframe" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
@@ -99,6 +100,26 @@
     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </section>
 
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const tiles = document.querySelectorAll('.tile');
+    const buttons = document.querySelectorAll('.expand-button');
+
+    buttons.forEach((button, index) => {
+        button.addEventListener('click', () => {
+            tiles[index].classList.toggle('active');
+            // If you wish other tiles to collapse when one expands, uncomment the below code:
+            /*
+            tiles.forEach((tile, tileIndex) => {
+                if (index !== tileIndex) {
+                    tile.classList.remove('active');
+                }
+            });
+            */
+        });
+    });
+});
+</script>
 
    
     <footer>

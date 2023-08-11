@@ -97,12 +97,14 @@ a:hover {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;  /* Space between tiles */
+    cursor: pointer;
 }
 
 .tile-container > section {
     flex: 0 0 calc(50% - 10px);  /* Takes half of the container's width minus half of the gap */
     box-sizing: border-box;     /* To include any potential padding and border in the element's total width and height */
     max-width: calc(50% - 10px);
+    cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {
@@ -140,7 +142,5 @@ a:hover {
     }
 }
 
-.tile {
-    cursor: pointer;
-}
+    
 

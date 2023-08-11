@@ -104,22 +104,20 @@
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     const tiles = document.querySelectorAll('.tile');
-    const buttons = document.querySelectorAll('.expand-button');
 
-    buttons.forEach((button, index) => {
-        button.addEventListener('click', () => {
-            tiles[index].classList.toggle('active');
-            // If you wish other tiles to collapse when one expands, uncomment the below code:
-            /*
-            tiles.forEach((tile, tileIndex) => {
-                if (index !== tileIndex) {
-                    tile.classList.remove('active');
+    tiles.forEach((tile) => {
+        tile.addEventListener('click', () => {
+            tile.classList.toggle('active');
+            // Optional: collapse other tiles when one expands
+            tiles.forEach(otherTile => {
+                if (tile !== otherTile) {
+                    otherTile.classList.remove('active');
                 }
             });
-            */
         });
     });
 });
+
 </script>
 
    
